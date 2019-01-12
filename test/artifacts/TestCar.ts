@@ -1,5 +1,5 @@
 import { Column, Entity, OneToMany } from "typeorm";
-import { TestCarModel } from "./test-car-model";
+import { TestCarModel } from "./TestCarModel";
 import * as faker from "faker";
 import {AggregateRoot} from "../../src/core/model/AggregateRoot";
 

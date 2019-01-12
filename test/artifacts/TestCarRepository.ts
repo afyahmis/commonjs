@@ -1,4 +1,4 @@
-import { TestCar } from "./test-car";
+import { TestCar } from "./TestCar";
 import { InjectConnection } from "typeorm-typedi-extensions";
 import { Connection } from "typeorm";
 import { Service } from "typedi";

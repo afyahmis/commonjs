@@ -1,7 +1,7 @@
-import { TestCar } from "../../artifacts/test-car";
-import { TestCarModel } from "../../artifacts/test-car-model";
+import { TestCar } from "../../artifacts/TestCar";
+import { TestCarModel } from "../../artifacts/TestCarModel";
 
-describe("Aggregate Root", () => {
+describe("Aggregate Root tests", () => {
 
     let car: TestCar;
 

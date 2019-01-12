@@ -1,5 +1,5 @@
 import { Column, Entity, ManyToOne } from "typeorm";
-import { TestCar } from "./test-car";
+import { TestCar } from "./TestCar";
 import {EntityBase} from "../../src/core/model/EntityBase";
 
 @Entity()

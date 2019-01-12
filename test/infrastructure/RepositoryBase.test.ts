@@ -1,9 +1,9 @@
-import { TestCarRepository } from "../artifacts/test-car-repository";
-import { TestCar } from "../artifacts/test-car";
+import { TestCarRepository } from "../artifacts/TestCarRepository";
+import { TestCar } from "../artifacts/TestCar";
 import { Container } from "typedi";
-import { clearDb, initDbConnection } from "../test-initializer";
+import { clearDb, initDbConnection } from "../TestInitializer";
 
-describe("RepositoryBase", () => {
+describe("RepositoryBase tests", () => {
 
     const dummyCars = TestCar.getTestCars(5);
     let repository: TestCarRepository;
