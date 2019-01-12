@@ -1,0 +1,5 @@
+export {AggregateRoot} from  "./core/model/AggregateRoot"
+export {EntityBase} from  "./core/model/EntityBase"
+export {ObjectType} from  "./core/model/ObjectType"
+export {IRepositoryBase} from  "./core/interfaces/IRepositoryBase"
+export {RepositoryBase} from  "./infrastructure/RepositoryBase"

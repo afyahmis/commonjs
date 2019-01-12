@@ -68,5 +68,6 @@ typings/
 
 # others
 /dist/
+/lib/
 :memory
 *.sqlite
