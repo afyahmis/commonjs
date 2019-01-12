@@ -1,9 +1,9 @@
 {
   "name": "@afyahmis/commonjs",
-  "version": "0.1.8",
+  "version": "0.1.0",
   "description": "commonjs",
   "main": "lib/index.js",
-  "typings": "lib/index.d.ts",
+  "types": "lib/index.d.ts",
   "files": ["lib/**/*"],
 
   "scripts": {
