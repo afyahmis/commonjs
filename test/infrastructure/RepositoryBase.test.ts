@@ -4,7 +4,7 @@ import {Container} from "typedi";
 import {clearDb, initDbConnection, initDbConnectionMSSQL} from "../TestInitializer";
 
 describe("RepositoryBase tests", () => {
-    const useMssql = true;
+    const useMssql = false;
     const dummyCars = TestCar.getTestCars(5);
     let repository: TestCarRepository;
 
