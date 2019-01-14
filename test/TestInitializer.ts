@@ -18,9 +18,25 @@ export let clearDb= ()=> {
 
 export let initDbConnection = async () => {
     await createConnection({
-            logging: false,
+            logging: true,
             type: "sqlite",
             database: dbPath,
+            entities: ["test/artifacts/*.ts"],
+            synchronize: true
+        }
+    );
+};
+
+export let initDbConnectionMSSQL = async () => {
+    await createConnection({
+            logging: true,
+            type: "mssql",
+            host: "localhost",
+            schema:"dbo",
+            port: 1433,
+            username: "sa",
+            password: "M@un1983",
+            database: "commonjsTest",
             entities: ["test/artifacts/*.ts"],
             synchronize: true
         }

@@ -1,17 +1,23 @@
-import { Column, Entity, OneToMany } from "typeorm";
-import { TestCarModel } from "./TestCarModel";
+import {Column, Entity, OneToMany, PrimaryGeneratedColumn} from "typeorm";
+import {TestCarModel} from "./TestCarModel";
 import * as faker from "faker";
 import {AggregateRoot} from "../../src/core/model/AggregateRoot";
 
 @Entity()
 export class TestCar extends AggregateRoot {
+
+    @PrimaryGeneratedColumn("uuid")
+    id: string;
+
     @Column()
     name: string;
+
     @OneToMany(type => TestCarModel, m => m.testCar, {cascade: true, eager: true})
     models: TestCarModel[];
 
     constructor(name: string) {
         super();
+        this.id = this.newGuid();
         this.name = name;
     }
 

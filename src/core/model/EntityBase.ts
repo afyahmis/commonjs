@@ -1,12 +1,19 @@
-import {Column, Entity, PrimaryColumn, PrimaryGeneratedColumn} from "typeorm";
+import {Entity, CreateDateColumn, UpdateDateColumn, VersionColumn} from "typeorm";
 import uuidv1 from "uuid/v1";
 
 @Entity()
 export abstract class EntityBase {
-    @PrimaryColumn("uuid")
-    id: string;
 
-    protected constructor() {
-        this.id = uuidv1();
+    @CreateDateColumn()
+    createdDate: Date;
+
+    @UpdateDateColumn({nullable: true, default: () => "null"})
+    updatedDate: Date;
+
+    @VersionColumn()
+    version: number;
+
+    protected newGuid(): string {
+        return uuidv1();
     }
 }

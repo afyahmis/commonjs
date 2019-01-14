@@ -1,18 +1,17 @@
-import { TestCar } from "../../artifacts/TestCar";
-import { TestCarModel } from "../../artifacts/TestCarModel";
+import {TestCar} from "../../artifacts/TestCar";
+import {TestCarModel} from "../../artifacts/TestCarModel";
 
 describe("Entity Base tests", () => {
-
-    let carModel: TestCarModel;
-
+    let car: TestCar;
     beforeAll(() => {
-        const car = new TestCar("BMW");
+        car = new TestCar("BMW");
         car.addModel(new TestCarModel("X5", car));
-        carModel = car.models[0];
+        car.addModel(new TestCarModel("X1", car));
     });
 
     it("should have id", () => {
-        expect(carModel.id).not.toBeUndefined();
-        console.log(`${carModel}`);
+        expect(car.models[0].id).not.toBeUndefined();
+        expect(car.models[0].id).not.toBeUndefined();
+        car.models.forEach(carModel=>console.log(`${carModel.testCar.name} ${carModel.name} (${carModel.id})`));
     });
 });

@@ -1,9 +1,13 @@
-import { Column, Entity, ManyToOne } from "typeorm";
-import { TestCar } from "./TestCar";
+import {Column, Entity, ManyToOne, PrimaryGeneratedColumn} from "typeorm";
+import {TestCar} from "./TestCar";
 import {EntityBase} from "../../src/core/model/EntityBase";
 
 @Entity()
 export class TestCarModel extends EntityBase {
+
+    @PrimaryGeneratedColumn("uuid")
+    id: string;
+
     @Column()
     name: string;
 
@@ -12,6 +16,7 @@ export class TestCarModel extends EntityBase {
 
     constructor(name: string, testCar: TestCar) {
         super();
+        this.id = this.newGuid();
         this.name = name;
         this.testCar = testCar;
     }
